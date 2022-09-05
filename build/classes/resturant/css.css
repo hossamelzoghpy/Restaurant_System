@@ -1,0 +1,39 @@
+/*///////////////////log in////////////////////////*/
+#log{
+    -fx-background-color:#383E56;
+}
+#b1log{
+    -fx-background-color:#fb743e;
+    -fx-background-radius:20px;
+    
+}
+#b1log:hover{
+    -fx-background-color:red;
+}
+#t1log{
+    -fx-background-radius:20px;
+}
+/*///////////////////menu///////////////////////*/
+#menu{
+    -fx-background-color:#383E56;
+}
+#pmenu{
+    -fx-background-color:#fb743e;
+}
+#b1menu{
+    -fx-background-color:#383E56;
+    -fx-background-radius:20px
+}
+#bmenu{
+    -fx-background-color:#383E56;
+    -fx-background-radius:20px
+}
+#b1menu:hover{
+    -fx-background-color:red;
+}
+#vmenu{
+    -fx-background-color:#c5d7bd;
+}
+#p2menu{
+    -fx-background-color:#9fb8ad;
+}

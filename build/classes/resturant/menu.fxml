@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="menu" fx:id="menu" prefHeight="630.0" prefWidth="980.0" stylesheets="@css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resturant.MenuController">
+   <children>
+      <VBox id="vmenu" alignment="TOP_CENTER" prefHeight="137.0" prefWidth="742.0" stylesheets="@css.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="238.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Content" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="91.0" prefWidth="685.0">
+               <children>
+                  <Label text="Number Meals" textFill="#383e56">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="numM" disable="true" prefHeight="30.0" prefWidth="80.0">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Number Drinks" textFill="#383e56">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="numD" disable="true" prefHeight="30.0" prefWidth="80.0">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane id="pmenu" layoutX="720.0" prefHeight="603.0" prefWidth="260.0" stylesheets="@css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="741.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="b1menu" fx:id="mealM" layoutX="12.0" layoutY="73.0" mnemonicParsing="false" onAction="#meal" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="33.0" prefWidth="209.0" stylesheets="@css.css" text="Meals" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="b1menu" fx:id="drinkM" layoutX="12.0" layoutY="139.0" mnemonicParsing="false" onAction="#drink" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="33.0" prefWidth="209.0" stylesheets="@css.css" text="Drinks" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="bmenu" fx:id="logM" layoutX="12.0" layoutY="521.0" mnemonicParsing="false" onAction="#logout" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="33.0" prefWidth="209.0" stylesheets="@css.css" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="63.0" layoutY="12.0" prefHeight="45.0" prefWidth="113.0" text="Control" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <Text fx:id="done" fill="#2b00ff" layoutX="23.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="............................." textAlignment="CENTER" visible="false" wrappingWidth="190.99999521672726">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane id="p2menu" fx:id="paneM" layoutX="-1.0" layoutY="137.0" prefHeight="466.0" prefWidth="742.0" stylesheets="@css.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="137.0">
+         <children>
+            <Label layoutX="36.0" layoutY="61.0" text="Meal Number" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="109.0" text="Meal Name" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="153.0" text="Meal Type" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="200.0" text="Meal Price" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="priceMO" layoutX="134.0" layoutY="194.0" prefHeight="30.0" prefWidth="150.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="typeMO" layoutX="134.0" layoutY="147.0" prefHeight="30.0" prefWidth="150.0" promptText="Select:-" />
+            <Button id="b1menu" fx:id="addM" layoutX="50.0" layoutY="254.0" mnemonicParsing="false" onAction="#insertmeal" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Add Meal" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="b1menu" fx:id="modifyM" layoutX="48.0" layoutY="307.0" mnemonicParsing="false" onAction="#updateMeal" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Modify Meal" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="b1menu" fx:id="deleteM" layoutX="50.0" layoutY="362.0" mnemonicParsing="false" onAction="#deleteMeal" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Delete Meal" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="b1menu" fx:id="emptyM" layoutX="48.0" layoutY="416.0" mnemonicParsing="false" onAction="#emptyMeal" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Empty" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TableView fx:id="tableM" layoutX="344.0" layoutY="92.0" onMouseClicked="#selectMeal" prefHeight="385.0" prefWidth="361.0">
+              <columns>
+                <TableColumn fx:id="numMC1" prefWidth="92.0" text="Meal Number" />
+                <TableColumn fx:id="nameMC2" prefWidth="85.0" text="Meal Name" />
+                  <TableColumn fx:id="typeMC3" prefWidth="89.0" text="Meal Type" />
+                  <TableColumn fx:id="priceMC4" prefWidth="93.0" text="Meal price" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchM" layoutX="424.0" layoutY="54.0" onMousePressed="#searchMeal" prefHeight="30.0" prefWidth="280.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="345.0" layoutY="62.0" text="Search" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameMO" layoutX="134.0" layoutY="104.0" prefHeight="30.0" prefWidth="150.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="349.0" layoutY="9.0" text="Meals" textAlignment="CENTER" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numMO" layoutX="134.0" layoutY="56.0" prefHeight="30.0" prefWidth="150.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane id="p2menu" fx:id="paneD" layoutX="-1.0" layoutY="137.0" prefHeight="466.0" prefWidth="742.0" stylesheets="@css.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="137.0">
+         <children>
+            <Label layoutX="40.0" layoutY="57.0" text="Drink Number" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numDO" layoutX="137.0" layoutY="52.0" prefHeight="30.0" prefWidth="150.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="106.0" text="Drink Name" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="154.0" text="Drink Type" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="200.0" text="Drink Price" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="priceDO" layoutX="138.0" layoutY="190.0" prefHeight="30.0" prefWidth="150.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="typeDO" layoutX="138.0" layoutY="143.0" prefHeight="30.0" prefWidth="150.0" promptText="Select:-" />
+            <Button id="b1menu" fx:id="addD" layoutX="54.0" layoutY="250.0" mnemonicParsing="false" onAction="#insertdrink" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Add Drink" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="b1menu" fx:id="modifyD" layoutX="52.0" layoutY="303.0" mnemonicParsing="false" onAction="#updateDrink" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Modify Drink" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="b1menu" fx:id="deleteD" layoutX="54.0" layoutY="358.0" mnemonicParsing="false" onAction="#deleteDrink" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Delete Drink" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="b1menu" fx:id="emptyD" layoutX="52.0" layoutY="412.0" mnemonicParsing="false" onAction="#emptyDrink" prefHeight="37.0" prefWidth="232.0" stylesheets="@css.css" text="Empty" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TableView fx:id="tableD" layoutX="344.0" layoutY="89.0" onMouseClicked="#selectDrink" prefHeight="385.0" prefWidth="361.0">
+               <columns>
+                  <TableColumn fx:id="numDC1" prefWidth="92.0" text="Drink Number" />
+                  <TableColumn fx:id="nameDC2" prefWidth="85.0" text="Drink Name" />
+                  <TableColumn fx:id="typeDC3" prefWidth="89.0" text="Drink Type" />
+                  <TableColumn fx:id="priceDC4" prefWidth="93.0" text="Drink price" />
+               </columns>
+            </TableView>
+            <TextField fx:id="searchD" layoutX="424.0" layoutY="49.0" onMousePressed="#searchDrink" onMouseReleased="#searchDrink" prefHeight="30.0" prefWidth="280.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="345.0" layoutY="54.0" text="Search" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameDO" layoutX="138.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="349.0" layoutY="9.0" text="Drinks" textAlignment="CENTER" textFill="#383e56">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
